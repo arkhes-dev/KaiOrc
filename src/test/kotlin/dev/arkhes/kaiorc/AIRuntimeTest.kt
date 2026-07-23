@@ -1,4 +1,4 @@
-package com.kaiorc
+package dev.arkhes.kaiorc
 
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals

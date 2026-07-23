@@ -1,4 +1,4 @@
-package com.kaiorc
+package dev.arkhes.kaiorc
 
 /**
  * What every KaiOrc seam returns instead of throwing or returning a bare `Boolean` — generic over

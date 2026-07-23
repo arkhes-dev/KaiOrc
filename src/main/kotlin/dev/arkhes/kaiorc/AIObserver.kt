@@ -1,4 +1,4 @@
-package com.kaiorc
+package dev.arkhes.kaiorc
 
 /** One completed AI workflow execution — developer diagnostics only, never sent anywhere or collected as analytics. */
 data class WorkflowExecutionEvent(

@@ -1,4 +1,4 @@
-package com.kaiorc
+package dev.arkhes.kaiorc
 
 import javax.inject.Inject
 import javax.inject.Singleton
