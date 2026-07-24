@@ -4,7 +4,9 @@ plugins {
     signing
 }
 
-group = "io.github.arkhesdev"
+// Must exactly match the arkhes-dev GitHub org login for Sonatype's namespace verification -
+// Maven group IDs allow hyphens even though the Kotlin package (io.github.arkhesdev.kaiorc) can't.
+group = "io.github.arkhes-dev"
 version = "0.1.0"
 description = "A lightweight Kotlin library for AI workflow orchestration, provider abstraction, prompt pipelines, and structured execution."
 
