@@ -10,7 +10,9 @@ Feature → Workflow → AIRuntime → AIProvider → Result
 
 `AIRuntime` itself does no AI work — it coordinates. Everything else (which provider, what prompt, how to validate the reply, whether to retry) is a small, testable, swappable piece.
 
-> **Status:** pre-1.0 (`0.1.0-SNAPSHOT`), API not yet stable. Extracted from and currently powering [Aarizo](https://github.com/RakeshGanapathy/Aarizo), a production Android app — not a green-field toy, but not yet hardened for arbitrary third-party use either.
+> **Status:** pre-1.0 (`0.1.0-SNAPSHOT`), API not yet stable. Extracted from and currently powering [Aarizo](https://github.com/arkhes-dev/Aarizo), a production Android app — not a green-field toy, but not yet hardened for arbitrary third-party use either.
+
+![KaiOrc architecture overview](architecture.png)
 
 ---
 
