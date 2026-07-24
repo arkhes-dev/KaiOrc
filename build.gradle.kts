@@ -2,7 +2,7 @@ import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinJvm
 
 plugins {
-    kotlin("jvm") version "2.0.21"
+    kotlin("jvm") version "2.4.10"
     id("com.vanniktech.maven.publish") version "0.34.0"
     id("org.jetbrains.dokka") version "1.9.20"
     signing
