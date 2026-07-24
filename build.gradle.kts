@@ -11,7 +11,7 @@ plugins {
 // Must exactly match the arkhes-dev GitHub org login for Sonatype's namespace verification -
 // Maven group IDs allow hyphens even though the Kotlin package (io.github.arkhesdev.kaiorc) can't.
 group = "io.github.arkhes-dev"
-version = "0.1.1"
+version = "0.1.2"
 description = "A lightweight Kotlin library for AI workflow orchestration, provider abstraction, prompt pipelines, and structured execution."
 
 // Pure Kotlin/JVM — no Android, no Compose, no Hilt/KSP dependency. Consumers wire kaiorc's
@@ -39,6 +39,12 @@ dependencies {
 
 tasks.test {
     useJUnit()
+}
+
+tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
+    dokkaSourceSets.configureEach {
+        includes.from("Module.md")
+    }
 }
 
 mavenPublishing {
