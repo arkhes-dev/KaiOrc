@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * Per-run metadata threaded through a [Workflow] execution — deliberately minimal for now.

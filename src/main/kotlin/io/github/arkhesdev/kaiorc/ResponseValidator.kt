@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * Turns a raw AI reply into a trusted [TOutput], or an [AIResult.Failure] if it doesn't match what

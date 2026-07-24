@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 import kotlinx.coroutines.delay
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * The one seam a [Workflow] uses to talk to "the AI" — deliberately tiny. Everything provider-

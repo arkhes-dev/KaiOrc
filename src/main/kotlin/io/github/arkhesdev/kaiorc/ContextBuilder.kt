@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * Assembles the local, domain-specific data a [Workflow] needs before it can prompt the AI. The AI

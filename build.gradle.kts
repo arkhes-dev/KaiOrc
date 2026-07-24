@@ -1,9 +1,11 @@
 plugins {
     kotlin("jvm") version "2.0.21"
+    id("com.vanniktech.maven.publish") version "0.29.0"
+    signing
 }
 
-group = "dev.arkhes"
-version = "0.1.0-SNAPSHOT"
+group = "io.github.arkhesdev"
+version = "0.1.0"
 description = "A lightweight Kotlin library for AI workflow orchestration, provider abstraction, prompt pipelines, and structured execution."
 
 // Pure Kotlin/JVM — no Android, no Compose, no Hilt/KSP dependency. Consumers wire kaiorc's
@@ -31,4 +33,44 @@ dependencies {
 
 tasks.test {
     useJUnit()
+}
+
+mavenPublishing {
+    publishToMavenCentral()
+
+    coordinates(group.toString(), "kaiorc", version.toString())
+
+    pom {
+        name.set("KaiOrc")
+        description.set(project.description)
+        url.set("https://github.com/arkhes-dev/KaiOrc")
+
+        licenses {
+            license {
+                name.set("Apache-2.0")
+                url.set("https://www.apache.org/licenses/LICENSE-2.0")
+            }
+        }
+        developers {
+            developer {
+                id.set("arkhes-dev")
+                name.set("Arkhes")
+                email.set("rakeshganapathy.dev@gmail.com")
+                organization.set("Arkhes")
+                organizationUrl.set("https://github.com/arkhes-dev")
+            }
+        }
+        scm {
+            connection.set("scm:git:git://github.com/arkhes-dev/KaiOrc.git")
+            developerConnection.set("scm:git:ssh://github.com/arkhes-dev/KaiOrc.git")
+            url.set("https://github.com/arkhes-dev/KaiOrc")
+        }
+    }
+}
+
+// Signs via the local `gpg` command (key stays in the GPG keyring, never exported to a file).
+// Passphrase/key name come from ~/.gradle/gradle.properties (signing.gnupg.*), not this file.
+signing {
+    useGpgCmd()
+    sign(publishing.publications)
 }

@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * Composes the final system prompt from a [ContextBuilder]'s output — the one place a workflow's

@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * One reusable AI orchestration pipeline — e.g. "answer a home question" or "extract assets from

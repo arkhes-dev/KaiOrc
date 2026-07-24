@@ -1,4 +1,4 @@
-package dev.arkhes.kaiorc
+package io.github.arkhesdev.kaiorc
 
 /**
  * Classifies raw input into an intent before a [Workflow] is chosen. Deliberately just a decision
