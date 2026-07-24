@@ -10,7 +10,7 @@ Feature → Workflow → AIRuntime → AIProvider → Result
 
 `AIRuntime` itself does no AI work — it coordinates. Everything else (which provider, what prompt, how to validate the reply, whether to retry) is a small, testable, swappable piece.
 
-> **Status:** pre-1.0 (`0.1.0-SNAPSHOT`), API not yet stable. Extracted from and currently powering [Aarizo](https://github.com/arkhes-dev/Aarizo), a production Android app — not a green-field toy, but not yet hardened for arbitrary third-party use either.
+> **Status:** pre-1.0 (`0.1.1`), API not yet stable. Published to Maven Central as `io.github.arkhes-dev:kaiorc`. Extracted from and currently powering [Aarizo](https://github.com/arkhes-dev/Aarizo), a production Android app — not a green-field toy, but not yet hardened for arbitrary third-party use either.
 
 ![KaiOrc architecture overview](architecture.png)
 
@@ -60,7 +60,18 @@ There's no backend in this picture — because for a lot of real apps (mobile es
 
 ## Installation
 
-KaiOrc isn't published to Maven Central yet (see [Roadmap](#roadmap)). Until then, consume it as a **Gradle composite build** from a sibling checkout:
+KaiOrc is published to Maven Central:
+
+```kotlin
+// app/build.gradle.kts
+dependencies {
+    implementation("io.github.arkhes-dev:kaiorc:0.1.1")
+}
+```
+
+API docs: [javadoc.io/doc/io.github.arkhes-dev/kaiorc](https://javadoc.io/doc/io.github.arkhes-dev/kaiorc)
+
+Developing KaiOrc and a consumer side by side? Use a **Gradle composite build** from a sibling checkout instead, so edits are picked up immediately with no publishing step:
 
 ```kotlin
 // settings.gradle.kts
@@ -70,11 +81,11 @@ includeBuild("../KaiOrc")
 ```kotlin
 // app/build.gradle.kts
 dependencies {
-    implementation("dev.arkhes:kaiorc:0.1.0-SNAPSHOT")
+    implementation("io.github.arkhes-dev:kaiorc:0.1.1")
 }
 ```
 
-Gradle resolves that dependency against the local KaiOrc checkout — no publishing step, edits in KaiOrc are picked up immediately by anything depending on it.
+Gradle resolves that dependency against the local KaiOrc checkout instead of Maven Central whenever `includeBuild` is present.
 
 ## Quick start
 
@@ -183,13 +194,13 @@ val observer = AIObserver { event ->
 
 - [x] Extract from Aarizo into a standalone Kotlin/JVM module
 - [x] Move to its own repository, independent build, independent history
+- [x] Make the repository public
+- [x] Publish to Maven Central under `io.github.arkhes-dev:kaiorc`
 - [ ] Stabilize the public API surface (pre-1.0 breaking changes still possible)
-- [ ] Make the repository public
-- [ ] Publish to Maven Central under `dev.arkhes:kaiorc`
 
 ## Contributing
 
-KaiOrc is currently a private, pre-1.0 project developed alongside [Aarizo](https://github.com/arkhes-dev/Aarizo). It isn't open to outside contributions yet — that opens up once the repository goes public and the API stabilizes. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines once it does.
+KaiOrc is public but still pre-1.0, developed alongside [Aarizo](https://github.com/arkhes-dev/Aarizo) with breaking API changes still possible. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
