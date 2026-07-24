@@ -182,13 +182,13 @@ val observer = AIObserver { event ->
 - [x] Extract from Aarizo into a standalone Kotlin/JVM module
 - [x] Move to its own repository, independent build, independent history
 - [ ] Stabilize the public API surface (pre-1.0 breaking changes still possible)
-- [ ] Publish under Apache License 2.0 and make the repository public
+- [ ] Make the repository public
 - [ ] Publish to Maven Central under `dev.arkhes:kaiorc`
 
 ## Contributing
 
-KaiOrc is currently a private, pre-1.0 project developed alongside [Aarizo](https://github.com/RakeshGanapathy/Aarizo). It isn't open to outside contributions yet — that opens up once the repository goes public and the API stabilizes.
+KaiOrc is currently a private, pre-1.0 project developed alongside [Aarizo](https://github.com/arkhes-dev/Aarizo). It isn't open to outside contributions yet — that opens up once the repository goes public and the API stabilizes. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines once it does.
 
 ## License
 
-Apache License 2.0 — **pending.** The repository is private during pre-1.0 development; the license will be added when it goes public.
+[Apache License 2.0](LICENSE).
