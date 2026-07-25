@@ -1,4 +1,4 @@
-# KaiOrc
+# KaiOrc — Kotlin-based AI Orchestrator
 
 **KaiOrc** is a lightweight Kotlin library for AI workflow orchestration — provider abstraction, prompt pipelines, and structured execution — built for Kotlin/JVM and Kotlin Multiplatform-friendly codebases, with Android as its first real-world proving ground.
 
