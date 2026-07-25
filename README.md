@@ -1,5 +1,8 @@
 # KaiOrc — Kotlin-based AI Orchestrator
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.arkhes-dev/kaiorc.svg)](https://central.sonatype.com/artifact/io.github.arkhes-dev/kaiorc)
+
 **KaiOrc** is a lightweight Kotlin library for AI workflow orchestration — provider abstraction, prompt pipelines, and structured execution — built for Kotlin/JVM and Kotlin Multiplatform-friendly codebases, with Android as its first real-world proving ground.
 
 It answers one question: *how do you build sophisticated AI features without every feature reinventing its own request/response glue?*
